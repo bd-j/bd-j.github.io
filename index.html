@@ -16,31 +16,34 @@
     <div class="wrapper">
       <header>
         <h1>Benjamin Johnson</h1>
-        <img src="images/thesis1.png" style="height: 32px; margin-left:-0px"></img>
+        <img src="images/thesis1.png" style="height=42px">
         <h2>Models+Data</h2>
         <h2>Astronomy</h2>
         <ul>
             <li><a href="https://github.com/bd-j/">
-                GitHub
-            </a></li>
-            <li><a href="https:/">
-	        Resum&eacute    
+              GitHub
             </a></li>
             <li><a href="https://">
-                Publications
+	      Resum&eacute    
+            </a></li>
+            <li><a href="https://">
+              Publications
             </a></li>
             <li><a href="index.html#projects">
-	    Projects
+	      Projects
+	    </a></li>
+	    <li><a href="index.html#code">
+	      Code
             </a></li>
+
         </ul>
       </header>
       <section>
-	<img src="images/thesis2.png" style="width:460px;
-    margin-left:10px"></img>
+	<img src="images/thesis2.png" style=""></img>
         <div class="blurb">
             <p>
-            I work on the inference of star and galaxy properties in
-            the nearby and distant universe based on observations of
+            I work to infer of star and galaxy properties in
+            the nearby and distant universe from their
 	    <a href="http://en.wikipedia.org/wiki/Electromagnetic_spectrum">
 	    spectral energy distributions</a>.
             </p>
@@ -54,29 +57,42 @@
             </p>
         </div>
         <div class="products">
-	    <h2>Code</h2>
+	    <h2 id="code">Code</h2>
 	    <p>
 	    I've worked on this software, and I hope you can use it.
             Mostly it's in python
 	    </p>
 	    <p>
-              <ul id="code">
+              <ul>
                 <li>
                   <div class="ftext">
 		    <a href="https://github.com/bd-j/sedpy">sedpy:</a>
-                    Tools for working with astronomical spectral energy distributions,
-                    including especially filter projections.  Also includes dust
-                    extinction and attenuation models, 
+                    Python tools for working with astronomical spectral energy distributions, 
+                    especially filter projections, with a flexible system for adding
+		    new filters.  Also includes tools for dust extinction and attenuation,
+		    and basic photometry modules.
+<pre><code class="python">
+    from matplotlib.pyplot import *
+    from sedpy import observate
+    filterlist = observate.load_filters(['sdss_u','sdss_i'])
+    mags = observate.getSED(wave, spec, filterlist)
+    plot([f.wave_effective for f in filterlist], mags)
+</pre></code>
+
                   </div>
                 </li>
                 <li>
                   <div class="ftext">
-		    <a href="https://github.com/bd-j/bsfh">bsfh</a>
+		    <a href="https://github.com/bd-j/bsfh">bsfh:</a>
+		    Inference from full spectral fitting combined with
+                    photometry, using MCMC sampling and gaussian processes.
                   </div>
                 </li>
                 <li>
                   <div class="ftext">
-		    <a href="https://github.com/bd-j/hmc">hmc</a>
+		    <a href="https://github.com/bd-j/hmc">hmc:</a>
+		    A simple Hamiltonian Monte Carlo sampler, written
+                    in python and Fortran.
                   </div>
                 </li>
 
@@ -95,17 +111,18 @@
 		</li>
 		<li>
                   <div class="ftext">
-		    SEDFIDL
+		    <a href="https://github.com/bd-j/sedfidl">sedfidl:</a>
+		    IDL code for fitting broadband SEDs to libraries
+                    of population synthesis models.
                   </div>
                 </li>
-
-
 	      </ul>
 	    </p>
+	    <p>  
+             ...and more! See the <a href="http://github.com/bd-j">
+             documentation</a> for details.
+            </p>
 	      
-<pre><code class="python">
-    from bsfh import sedmodel
-</pre></code>
 	    <h2 id="projects">Projects</h2>
 	    <p>
 	    Science research and otherwise ...
@@ -114,7 +131,9 @@
 	    <p>
                 <li>
                   <div class="ftext">
+		    <a href="http://user.astro.columbia.edu/~bjohnson/GMACS/catalogs.html">
 		    GMACS
+		    </a>
                   </div>
                 </li>
                 <li>
@@ -124,10 +143,6 @@
                 </li>
 	      </ul>
 	    </p>
-	    <p>  
-             ...and more! See the <a href="http://github.com/bd-j">
-             documentation</a> for details.
-            </p>
       </section>
 
 

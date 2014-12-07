@@ -77,13 +77,6 @@ a:hover {
   color: #1B4B9A;
 }
 
-a small {
-  font-size:11px;
-  color:#777;
-  margin-top:-0.6em;
-  display:block;
-}
-
 .wrapper {
   width:760px;
   margin:0 auto;
@@ -135,7 +128,7 @@ img {
 }
 
 header {
-  width:270px;
+  width:160px;
   float:left;
   position:fixed;
 }
@@ -170,35 +163,18 @@ footer {
 }
 
 .blurb {
-  margin-top: 62px;
+  margin-top: 32px;
 }
 
-.who img {
-  margin-top: 20px;
-  margin-bottom: 10px;
+section img {
+  width:100%;
 }
 
-.who img:hover {
-  opacity: 0.8;
+header img {
+  width:160px;
 }
 
-.allston {
-  height: 64px;
-}
-
-.chango {
-  height: 50px;
-}
-
-.nokia {
-  height: 38px;
-}
-
-.zemanta {
-  height: 50px;
-}
-
-@media print, screen and (max-width: 960px) {
+@media print, screen and (max-width: 840px) {
 
   div.wrapper {
     width:auto;
@@ -212,7 +188,11 @@ footer {
   }
 
   header {
-    padding-right:320px;
+    padding-right:270px;
+  }
+
+  header img {
+    width:300px;
   }
 
   section {
