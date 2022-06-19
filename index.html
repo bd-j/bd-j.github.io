@@ -21,7 +21,7 @@
         <h2>Astronomy</h2>
         <ul>
             <li><a href="https://dl.dropboxusercontent.com/u/29739456/cv_bdj.pdf">
-	      Resum&eacute    
+	      Resum&eacute
             </a></li>
             <li><a href="https://dl.dropboxusercontent.com/u/29739456/publist.pdf">
               Publications
@@ -45,38 +45,45 @@
             My current work is inferring star and galaxy properties in
             the nearby and distant universe from their
 	    <a href="http://en.wikipedia.org/wiki/Electromagnetic_spectrum">
-	    spectral energy distributions (SEDs)</a>.
+	    spectral energy distributions (SEDs)</a> and images.
             </p>
 	    <p>
 	    I help build generative physical models and use I use advanced statistical
-            techniques to compare the models' predictions to piles of astronomical data
-	    obtained with big chunks of glass and metal in space.  
+      techniques to compare the models' predictions to piles of astronomical data
+	    obtained with big chunks of glass and metal in space.
 	    </p>
 	    <p>
-	    I have worked as an astronomer and data analyst for 15 years, six of them
+	    I have worked as an astronomer and data analyst for 20 years, six of them
 	    in Cambridge, England and Paris, France. My experience includes operating
 	    ground-based telescopes in the US and Chile and working with data from
 	    several satellite telescopes, including Hubble, Galex, and Spitzer.
 	    </p>
-            <p>
-            See some of my <a href="index.html#projects">projects</a>
-            </p>
+      <p>
+      See some of my <a href="index.html#projects">projects</a>
+      </p>
         </div>
         <div class="products">
-	    <h2 id="code">Code</h2>
-	    <p>
-	    I've worked on this software, and I hope you can use it.
-            Mostly it's in Python.
-	    </p>
-	    <p>
-              <ul>
-                <li>
-                  <div class="ftext">
-		    <a href="https://github.com/bd-j/sedpy">sedpy:</a>
-                    Python tools for working with astronomical spectral energy distributions, 
-                    especially filter projections, with a flexible system for adding
-		    new filters.  Also includes tools for dust extinction and attenuation,
-		    and basic photometry modules.
+	      <h2 id="code">Code</h2>
+	      <p>
+	      I've worked on this software, and I hope you can use it.
+        Mostly it's in Python.
+	      </p>
+        <p>
+          <ul>
+            <li>
+              <div class="ftext">
+              <a href="https://github.com/bd-j/prospector">prospector:</a>
+              Inference from full spectral fitting combined with
+              photometry, using MCMC sampling and gaussian processes.
+              </div>
+            </li>
+            <li>
+                <div class="ftext">
+                <a href="https://github.com/bd-j/sedpy">sedpy:</a>
+                  Python tools for working with astronomical spectral energy distributions,
+                  especially filter projections, with a flexible system for adding
+                  new filters.  Also includes tools for dust extinction and attenuation and
+                  basic photometry modules.
 <pre><code class="python">
     from matplotlib.pyplot import *
     from sedpy import observate
@@ -84,50 +91,35 @@
     mags = observate.getSED(wave, spec, filterlist)
     plot([f.wave_effective for f in filterlist], mags)
 </pre></code>
+                </div>
+            </li>
+            <li>
+                <div class="ftext">
+                <a href="http://dan.iel.fm/python-fsps/current/">python-FSPS:</a>
+                Python bindings to Charlie Conroy's FSPS
+                stellar population synthesis models.
+                </div>
+            </li>
+            <li>
+                <div class="ftext">
+                <a href="https://github.com/bd-j/forcepho">forcepho:</a>
+                Forward image modeling galaxies and Bayesian inference of galaxy shape
+                and flux parameters using HMC
+                </div>
+            </li>
+            <li>
+              <div class="ftext">
+              <a href="https://github.com/bd-j/hmc">hmc:</a>
+                A simple Hamiltonian Monte Carlo sampler, written
+                in Python and Fortran.
+              </div>
+            </li>
+          </ul>
+        </p>
+        <p>
+        ...and more! See my <a href="http://github.com/bd-j">github repos</a> for some others.
+        </p>
 
-                  </div>
-                </li>
-                <li>
-                  <div class="ftext">
-		    <a href="https://github.com/bd-j/bsfh">bsfh:</a>
-		    Inference from full spectral fitting combined with
-                    photometry, using MCMC sampling and gaussian processes.
-                  </div>
-                </li>
-                <li>
-                  <div class="ftext">
-		    <a href="https://github.com/bd-j/hmc">hmc:</a>
-		    A simple Hamiltonian Monte Carlo sampler, written
-                    in Python and Fortran.
-                  </div>
-                </li>
-                <li>
-                  <div class="ftext">
-		    <a href="http://dan.iel.fm/python-fsps/current/">python-FSPS:</a>
-		    Python bindings to Charlie Conroy's FSPS
-		    stellar population synthesis models.
-                  </div>
-		</li>
-		<li>
-                  <div class="ftext">
-		    <a href="https://github.com/bd-j/sedfidl">sedfidl:</a>
-		    IDL code for fitting broadband SEDs to libraries
-                    of population synthesis models.
-                  </div>
-                </li>
-                <li>
-                  <div class="ftext">
-		    pyxydust
-                  </div>
-                </li>
-
-	      </ul>
-	    </p>
-	    <p>  
-             ...and more! See my <a href="http://github.com/bd-j">
-             github repos</a> for some others.
-            </p>
-	      
 	    <h2 id="projects">Projects</h2>
 	    <p>
 	    Science research and otherwise ...
@@ -135,47 +127,49 @@
        <!-- <h2>Collaborations</h2> -->
 	    <p>
 	      <ul>
-                <li>
-                  <div class="ftext">
-		    <a href="http://user.astro.columbia.edu/~bjohnson/GMACS/catalogs.html">
-		    GMACS:
-		    </a> A database of matched UV through Far-IR
-	            photometry of 1000 galaxies from the SDSS main galaxy
-	            spectroscopic sample.
-                  </div>
-                </li>
-                <li>
-                  <div class="ftext">
-		    LVL
-                  </div>
-		</li>
-		<li>
-                  <div class="ftext">
-		  <a href="http://cwp.library.ucla.edu">
-		  The Contributions of Women to 20th Century Physics:
-		  </a> A peer reviewed database describing fundamental
-	               contributions of women to Physics, which I
-		       worked on as an undergrad.
-                  </div>
-		  </li>
-		  
-		  
+          <li>
+              <div class="ftext">
+              <a href="http://cwp.library.ucla.edu">
+              The Contributions of Women to 20th Century Physics:
+              </a>
+              A peer reviewed database describing fundamental contributions of women to Physics,
+              which I worked on as an undergrad.
+              </div>
+          </li>
+          <li>
+              <div class="ftext">
+              <a href="http://user.astro.columbia.edu/~bjohnson/GMACS/catalogs.html">
+              GMACS:
+              </a>
+              A database of matched UV (GALEX) through Far-IR photometry of 1000 galaxies from the
+              SDSS main galaxy spectroscopic sample.
+              </div>
+          </li>
+          <li>
+              <div class="ftext">
+              LVL, KINGFISH
+              </div>
+		      </li>
+          <li>
+              <div class="ftext">
+              <a href="http://h3survey.rc.fas.harvard.edu">
+              H3 Survey
+              </div>
+          </li>
 	      </ul>
 	    </p>
       </section>
 
 
-
       <footer>
-	 <p><small>
-	   adapted from <a href="http://discoproject.org">discoproject</a>
-	 </p></small>
+   	  <p><small>
+	    adapted from <a href="http://discoproject.org">discoproject</a>
+	    </p></small>
       </footer>
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
+      </div>
+      <script src="javascripts/scale.fix.js"></script>
 
-    <script src="javascripts/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-
+      <script src="javascripts/highlight.pack.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>
